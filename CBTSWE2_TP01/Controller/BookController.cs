@@ -9,6 +9,7 @@ using TP01.Models;
 using TP01.Repository;
 
 // Vinicius do Nascimento Ayres (CB3025675)
+// Matheus Leandro Terra Luciano (CB3024881)
 
 namespace TP01.Controller
 {
