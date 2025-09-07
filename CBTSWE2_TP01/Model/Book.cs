@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 // Vinicius do Nascimento Ayres (CB3025675)
+// Matheus Leandro Terra Luciano (CB3024881)
 
 namespace TP01.Models
 {
