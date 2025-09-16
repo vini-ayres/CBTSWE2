@@ -1,0 +1,78 @@
+﻿@using TP02.Models.Consts;
+@using TP02.Models.Entity;
+@model Container
+
+@{
+    ViewData["Title"] = "Cadastrar - Container";
+}
+
+<h1 class="text-center mb-4">Cadastrar Container</h1>
+
+<h4 id="text-center">Informações do Container</h4>
+<hr />
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="Numero" class="form-label"></label>
+                <input asp-for="Numero" class="form-control" placeholder="Número do container" />
+                <span asp-validation-for="Numero" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Tipo" class="form-label"></label>
+                <select asp-for="Tipo" class="form-select">
+                    <option value="">Selecione o tipo</option>
+                    @foreach (var item in ConstTipoContainer.GetSelectList())
+
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+                <span asp-validation-for="Tipo" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Tamanho" class="form-label"></label>
+                <select asp-for="Tamanho" class="form-select">
+                    <option value="">Selecione o tamanho</option>
+                    @foreach (var item in ConstTamanhoContainer.GetSelectList())
+
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+                <span asp-validation-for="Tamanho" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="BillId" class="form-label">ID do BL</label>
+                <select asp-for="BillId" class="form-select">
+                    <option value="">Selecione o BL</option>
+                    @foreach (var item in ViewBag.Bills)
+
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="mt-4 text-center">
+    <a asp-action="Index" class="btn btn-secondary">Voltar para lista</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

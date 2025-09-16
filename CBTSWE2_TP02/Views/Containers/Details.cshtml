@@ -1,0 +1,43 @@
+﻿@using TP02.Models.Entity;
+@model Container
+
+@{
+    ViewData["Title"] = "Detalhes - Container";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Container</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Numero)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Numero)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tipo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tamanho)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tamanho)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Bill)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bill.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Voltar para lista</a>
+</div>
