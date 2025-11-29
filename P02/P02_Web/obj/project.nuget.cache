@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9nXj0F9rm8M=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aluno\\Downloads\\P2_SWII6-main\\P2_SWII6-main\\P02_Web\\P02_Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aluno\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
